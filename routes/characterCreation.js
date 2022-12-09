@@ -1,13 +1,25 @@
+const character = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
-
-let user_id = uuidv4();
   
 console.log(uuidv4());
 
-// createId();
+// POST Route for a new note
+character.post('/', (req, res) => {
+    console.info(`${req.method} request received to add a character`);
+    console.log(req.body);
 
-// let user_id = uuidv4();
+    const { name, type } = req.body;
 
-// return user_id;
+    if (req.body) {
+        const newCharacter = {
+            name,
+            type,
+            user_id: uuidv4()
+        };
 
-// module.exports = uuidv4;
+        readAndAppend(newNote, './db/notes.json');
+        res.json(`Tip added successfully 🚀`);
+    } else {
+        res.error('Error in adding note');
+    }
+});

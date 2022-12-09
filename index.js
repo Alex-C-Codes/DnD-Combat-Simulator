@@ -12,7 +12,7 @@ const combat = require('./lib/combat');
 // console.out('Your UUID is: ' + myuuid);
 
 function init() {
-    console.log(characterCreation);
+    // console.log(characterCreation);
     combat;
     // getMonster();
 }
