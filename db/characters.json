@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Durden",
+        "type": "Fighter",
+        "level": "1",
+        "xp": "0",
+        "ac": "15",
+        "hp": "18",
+        "actions": "attack",
+        "inventory": "3 healing potions",
+        "user_id": "a9c5675c-a6ec-4964-984e-f0e3a142d262"
+    }
+]

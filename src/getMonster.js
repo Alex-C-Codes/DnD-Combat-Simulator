@@ -7,8 +7,10 @@ var dndApiURL = 'https://www.dnd5eapi.co/api/monsters/adult-red-dragon/';
 const Monster = require('../lib/monster');
 
 // gets monster stats
-function getMonster() {
-    fetch(dndApiURL)
+async function getMonster() {
+    // let monster;
+
+    return await fetch(dndApiURL)
         .then((response) => response.json())
         .then((data) => {
 
@@ -23,9 +25,12 @@ function getMonster() {
             // create new Monster
             var monster = new Monster(data.name, data.challenge_rating, data.xp, data.armor_class, data.hit_points, data.actions);
 
-            console.log(monster);
+            // var monsterArr = [data.name, data.challenge_rating, data.xp, data.armor_class, data.hit_points, data.actions];
 
+            // console.log(monster);
             return monster;
+
+            // console.log(monster);
 
             // // check to see if monster has multiattack.
             // if (data.actions[0].name === 'Multiattack') {
@@ -38,8 +43,6 @@ function getMonster() {
             // for (let i = 0; i < data.actions.length; i++) {
             //     console.log(`Action ${i}: ${data.actions[i].name}`);
             // }
-
-
 
             // // simple attack example
 
