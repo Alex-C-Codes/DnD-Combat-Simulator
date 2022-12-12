@@ -1,7 +1,26 @@
 const character = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
+const { readFromFile, writeToFile, readAndAppend } = require('../helpers/fsUtils');
   
 // console.log(uuidv4());
+
+// GET Route for retrieving all the characters
+notes.get('/', (req, res) => {
+    console.info(`${req.method} request recieved for characters`);
+    readFromFile('./db/characters.json').then((data) => res.json(JSON.parse(data)));
+});
+
+// GET Route for a specific character
+//
+//
+//
+//
+
+// DELETE Route for a specific character
+//
+//
+//
+//
 
 // POST Route for a new note
 character.post('/', (req, res) => {
@@ -17,9 +36,11 @@ character.post('/', (req, res) => {
             user_id: uuidv4()
         };
 
-        readAndAppend(newNote, './db/notes.json');
-        res.json(`Tip added successfully 🚀`);
+        readAndAppend(newCharacter, './db/characters.json');
+        res.json(`Character added successfully 🚀`);
     } else {
-        res.error('Error in adding note');
+        res.error('Error in adding character');
     }
 });
+
+module.exports = character;

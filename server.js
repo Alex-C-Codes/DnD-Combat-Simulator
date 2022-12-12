@@ -11,8 +11,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public')); // serves static assets like HTML or CSS. Lets us have routes that are created for us because they're in the public folder
 
 // GET Route for saved characters list page
-app.get('/saved-characters', (req, res) => 
+app.get('/characters', (req, res) => 
     res.sendFile(path.join(__dirname, '/db/characters.json')) // Tyler needs to add html path here
+);
+
+// GET Route for combat page
+app.get('/combat', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
 // Wildcard GET Route for homepage. Gets any route that isn't /notes
