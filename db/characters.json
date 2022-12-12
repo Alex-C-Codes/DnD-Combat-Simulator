@@ -6,8 +6,49 @@
         "xp": "0",
         "ac": "15",
         "hp": "18",
-        "actions": "attack",
+        "actions": [{
+			"name": "Short Sword",
+			"desc": "Melee Weapon Attack: reach 10 ft., one target. Hit: 17 (1d6 + 0).",
+			"attack_bonus": 10,
+			"damage": [
+				{
+					"damage_type": {
+						"index": "piercing",
+						"name": "Piercing",
+						"url": ""
+					},
+					"damage_dice": "1d6+0"
+				}
+			],
+			"actions": []
+		}],
         "inventory": "3 healing potions",
         "user_id": "a9c5675c-a6ec-4964-984e-f0e3a142d262"
+    },
+    {
+        "name": "Robin Hood",
+        "type": "Ranger",
+        "level": "1",
+        "xp": "0",
+        "ac": "15",
+        "hp": "18",
+        "actions": [{
+			"name": "Long Bow",
+			"desc": "Ranged Weapon Attack: reach 150 ft., one target. Hit: (1d8 + 0).",
+			"attack_bonus": 10,
+			"damage": [
+				{
+					"damage_type": {
+						"index": "piercing",
+						"name": "Piercing",
+						"url": ""
+					},
+					"damage_dice": "1d8+0"
+				}
+			],
+			"actions": []
+		}],
+        "inventory": "3 healing potions",
+        "user_id": ""
     }
 ]
