@@ -12,7 +12,9 @@ character.get('/', (req, res) => {
 });
 
 // GET Route for a specific character
-character.get('/:user_id', (req, res) => {
+//character.get('/:user_id', (req, res) => {
+    character.get= require("dotenv").config();
+    console.log(process.env.user_id);
     const userId = req.params.user_id;
     readFromFile('./db/notes.json')
         .then((data) => JSON.parse(data))
