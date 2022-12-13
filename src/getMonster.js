@@ -3,7 +3,7 @@ const fetch = require('node-fetch');
 // connects with the api url
 require("dotenv").config();
 
-console.log(process.env.dndApiURL)
+console.log(process.env.dndApiURL);
 
 // create class variable
 const Monster = require('../lib/monster');
