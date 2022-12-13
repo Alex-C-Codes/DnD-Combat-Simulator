@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <title>DND Combat Simulator</title>
+</head>
+<body class="bg-red-600">
+    <!-- Navbar -->
+    <header class="bg-red-600 sticky">
+        <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
+            <div class="flex w-full items-center justify-between border-b border-black py-6 lg:border-none">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <!-- screen reader -->
+                        <span class="sr-only">Dungeon and Dragons combat simulator</span>
+                        <img class="h-10 w-auto" src="https://clipground.com/images/dd-logo-9.png" alt="">
+                    </a>
+                    <!-- Navbar links -->
+                    <div class="ml-10 hidden space-x-8 lg:block">
+                        <a href="savedFighters.html" class="text-base font-medium text-white hover:text-indigo-50">Saved Fighters</a>
+                        <a href="https://github.com/Alex-C-Codes/DnD-Combat-Simulator" class="text-base font-medium text-white hover:text-indigo-50">Github</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Navbar links -->
+            <div class="flex flex-wrap justify-center space-x-6 py-4 lg:hidden">
+                <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Saved Fighters</a>
+                <a href="https://github.com/Alex-C-Codes/DnD-Combat-Simulator" class="text-base font-medium text-white hover:text-indigo-50">Github</a>
+            </div>
+        </nav>
+    </header>  
+
+    <!-- Hero Image -->
+    <div class="relative bg-gray-700">
+        <div class="absolute inset-0">
+            <img class="h-full w-full object-cover mobile-container" src="https://c4.wallpaperflare.com/wallpaper/633/896/62/action-adventure-dragon-dragons-wallpaper-preview.jpg" alt="Dungeon and dragons hero image">
+            <div class="absolute inset-0 bg-gray-600 mix-blend-multiply" aria-hidden="true"></div>
+        </div>
+        <div class="relative mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold tracking-tight text-red-600 sm:text-5xl lg:text-6xl">Dungeon & Dragons Combat Simulator</h1>
+            <p class="mt-6 max-w-3xl text-xl text-indigo-100">This is a website where you can build a D&D fighter below and simulate a fight between a DnD monster in the War Room!</p>
+        </div>
+    </div>  
+
+    <!-- Build Fighter container -->
+    <div class="container flex flex-col items-center mt-5 mx-auto">
+        <h1 class="text-3xl underline">Build Your Fighter</h1>
+        <fieldset class="space-y-5 mt-5">
+            <!-- Fighter name -->
+            <label for="name" class="block text-xs font-medium text-gray-900">Name</label>
+            <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" placeholder="Fighter">
+            <legend class="sr-only">Fighter options</legend>
+            <!-- First fighter options -->
+            <div class="relative flex items-start mt-5">
+              <div class="flex h-5 items-center">
+                <input id="comments" aria-describedby="comments-description" name="comments" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="comments" class="text-lg text-black">Swordsman</label>
+                <span id="comments-description" class="text-gray-400"><span class="sr-only">Fighter one </span>Fighter with a sword.</span>
+              </div>
+            </div>
+            <!-- Second fighter options -->
+            <div class="relative flex items-start">
+              <div class="flex h-5 items-center">
+                <input id="candidates" aria-describedby="candidates-description" name="candidates" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
+              </div>
+              <div class="ml-3 text-sm">
+                <label for="candidates" class="text-lg text-black">Archer</label>
+                <span id="candidates-description" class="text-gray-400"><span class="sr-only">Fighter two </span>Fighter with a bow & arrow.</span>
+              </div>
+            </div>
+            <!-- Build Fighter Button This button takes you to warRoom.html-->
+            <div class="flex flex-col mt-5">
+                <button onclick="window.location.href='warRoom.html';" type="button" class="rounded-md border border-gray-300 bg-white px-8 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Build Fighter</button>
+            </div>
+        </fieldset>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-red-500 mt-10 sticky text-gray-400 text-right">
+        <p>This simulator is brought to you by Alex, Kevin & Tyler</p>
+    </footer>
+
+</body>
+</html>
