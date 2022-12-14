@@ -47,15 +47,39 @@
 
     <!-- Saved fighter list -->
     <div class="container flex flex-col items-center mt-5 mx-auto">
-        <ul role="list" class="space-y-3">
-            <!-- List items for the fighters -->
+        <!-- List items for the fighters -->
+        <!-- <ul role="list" class="space-y-3">
             <li class="overflow-hidden rounded-md bg-white mt-2 px-6 py-4 shadow">
                 <p>Fighter #1</p>
             </li>
             <li class="overflow-hidden rounded-md bg-white mt-2 px-6 py-4 shadow">
                 <p>Fighter #2</p>
             </li>
-        </ul>
+        </ul> -->
+        <div class="savedFightersContainer">
+            <table class="savedFightersTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Level</th>
+                        <th>XP</th>
+                        <th>AC</th>
+                        <th>HP</th>
+                        <th>Actions</th>
+                        <th>Damage Dice</th>
+                        <th>Inventory</th>
+                    </tr>
+                </thead>
+                <tbody id="data-output">
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <div>
+        <button onclick="location.href='/warRoom'" id="buildCharacterBtn">Start Combat</button>
     </div>
     
     <!-- Footer -->
@@ -63,5 +87,6 @@
         <p>This simulator is brought to you by Alex, Kevin & Tyler</p>
     </footer>
 
+    <script src="../js/savedFightersScript.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/dist/output.css">
+    <link rel="stylesheet" href="../../dist/output.css">
     <title>DND Combat Simulator</title>
 </head>
 <body class="bg-red-600">
@@ -47,36 +47,47 @@
 
     <!-- Build Fighter container -->
     <div class="container flex flex-col items-center mt-5 mx-auto">
-        <h1 class="text-3xl underline">Build Your Fighter</h1>
+        <h1 class="text-3xl underline">Build Your Character</h1>
         <fieldset class="space-y-5 mt-5">
             <!-- Fighter name -->
-            <label for="name" class="block text-xs font-medium text-gray-900">Name</label>
+            <!-- <label for="name" class="block text-xs font-medium text-gray-900">Name</label>
             <input type="text" name="name" id="name" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" placeholder="Fighter">
-            <legend class="sr-only">Fighter options</legend>
+            <legend class="sr-only">Character options</legend> -->
             <!-- First fighter options -->
-            <div class="relative flex items-start mt-5">
+            <!-- <div class="relative flex items-start mt-5">
               <div class="flex h-5 items-center">
                 <input id="comments" aria-describedby="comments-description" name="comments" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
               </div>
               <div class="ml-3 text-sm">
-                <label for="comments" class="text-lg text-black">Swordsman</label>
-                <span id="comments-description" class="text-black"><span class="sr-only">Fighter one </span>Fighter with a sword.</span>
+                <label for="comments" class="text-lg text-black">Fighter</label>
+                <span id="comments-description" class="text-black"><span class="sr-only">Character one </span>Fighter with a sword.</span>
               </div>
-            </div>
+            </div> -->
             <!-- Second fighter options -->
-            <div class="relative flex items-start">
+            <!-- <div class="relative flex items-start">
               <div class="flex h-5 items-center">
                 <input id="candidates" aria-describedby="candidates-description" name="candidates" type="checkbox" class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
               </div>
               <div class="ml-3 text-sm">
-                <label for="candidates" class="text-lg text-black">Archer</label>
-                <span id="candidates-description" class="text-black"><span class="sr-only">Fighter two </span>Fighter with a bow & arrow.</span>
+                <label for="candidates" class="text-lg text-black">Ranger</label>
+                <span id="candidates-description" class="text-black"><span class="sr-only">Character two </span>Archer with a bow & arrow.</span>
               </div>
-            </div>
+            </div> -->
             <!-- Build Fighter Button This button takes you to warRoom.html-->
-            <div class="flex flex-col mt-5">
+            <!-- <div class="flex flex-col mt-5">
                 <button onclick="window.location.href='savedFighters.html';" type="button" class="rounded-md border border-gray-300 bg-white px-8 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Build Fighter</button>
-            </div>
+            </div> -->
+            <form action="/savedFighters" method="post">
+                <label for="name" >Name:<br><input type="text" id="name" name="name" value="" required></label><br><br>
+
+                <div>Choose Your Character Types:</div><br>
+                <label><input type="radio" name="type" value="Fighter" required>Fighter</label><br>
+                <label><input type="radio" name="type" value="Ranger">Ranger</label><br><br>
+
+                <!-- <button name="buildCharacterBtn" value="buildCharacter" onclick="location.href='/public/pages/savedFighters.html'">Build Character</button> -->
+                <button onclick="location.href='/savedFighters'" id="buildCharacterBtn">Build Character</button>
+            </form>
+
         </fieldset>
     </div>
     
@@ -84,6 +95,6 @@
     <footer class="bg-red-500 mt-10 sticky text-black text-right">
         <p>This simulator is brought to you by Alex, Kevin & Tyler</p>
     </footer>
-
+    <!-- <script src="/public/js/characterCreation.js"></script> -->
 </body>
 </html>
