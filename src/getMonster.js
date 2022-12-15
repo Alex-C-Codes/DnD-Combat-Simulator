@@ -1,7 +1,9 @@
 // allows us to use fetch
 const fetch = require('node-fetch');
 // connects with the api url
-var dndApiURL = 'https://www.dnd5eapi.co/api/monsters/goblin/';
+require("dotenv").config();
+
+console.log(process.env.dndApiURL);
 
 // create class variable
 const Monster = require('../lib/monster');
