@@ -135,9 +135,10 @@ app.get('/warRoom', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/pages/warRoom.html'))
 );
 
-// need to get characters.json
+// need to get id from characters.json
 app.get('/:user_id', (req, res) => {
-  res.sendFile(path.join(__dirname, '/db/characters.json'))
+  // res.send(path.join(req.params))
+  console.log(res);
 });
 
 // delete character from character.json

@@ -9,7 +9,9 @@ fetch('http://localhost:3001/charactersList')
         let out = '';
         for (let character of characters) {
             out += `
+            <form>
             <tr>
+                <input type="radio" id="${character.user_id}" name="characterSelecio">
                 <td>${character.name}</td>
                 <td>${character.type}</td>
                 <td>${character.level}</td>
@@ -21,6 +23,7 @@ fetch('http://localhost:3001/charactersList')
                 <td>${character.inventory}</td>
                 <td><button onclick="" id='/${character.user_id}'>DELETE</button></td>
             </tr>
+            </form>
         `;
     }
     placeholder.innerHTML = out;
