@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/dist/output.css">
+    <title>DND Combat Simulator</title>
+</head>
+<body class="bg-red-600">
+    <!-- Navbar -->
+    <header class="bg-red-600 sticky">
+        <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
+            <div class="flex w-full items-center justify-between border-b border-black py-6 lg:border-none">
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <!-- screen reader -->
+                        <span class="sr-only">Dungeon and Dragons combat simulator</span>
+                        <img class="h-10 w-auto" src="https://clipground.com/images/dd-logo-9.png" alt="">
+                    </a>
+                    <!-- Navbar links -->
+                    <div class="ml-10 hidden space-x-8 lg:block">
+                        <a href="savedFighters.html" class="text-base font-medium text-white hover:text-indigo-50">Saved Fighters</a>
+                        <a href="https://github.com/Alex-C-Codes/DnD-Combat-Simulator" class="text-base font-medium text-white hover:text-indigo-50">Github</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Navbar links -->
+            <div class="flex flex-wrap justify-center space-x-6 py-4 lg:hidden">
+                <a href="#" class="text-base font-medium text-white hover:text-indigo-50">Saved Fighters</a>
+                <a href="https://github.com/Alex-C-Codes/DnD-Combat-Simulator" class="text-base font-medium text-white hover:text-indigo-50">Github</a>
+            </div>
+        </nav>
+    </header>  
+
+    <!-- Hero Image -->
+    <div class="relative bg-gray-700">
+        <div class="absolute inset-0">
+            <img class="h-full w-full object-cover mobile-container" src="https://free4kwallpapers.com/uploads/wallpaper/dragons-lair-wallpaper-1024x768-wallpaper.jpg" alt="Dungeon and dragons hero image">
+            <div class="absolute inset-0 bg-gray-600 mix-blend-multiply" aria-hidden="true"></div>
+        </div>
+        <div class="relative mx-auto max-w-7xl py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold tracking-tight text-red-600 sm:text-5xl lg:text-6xl">Welcome to the War Room</h1>
+            <p class="mt-6 max-w-3xl text-xl text-indigo-100">Now that you have built a fighter try you luck against a Dungeon and Dragons Monster!</p>
+        </div>
+    </div>  
+
+    <!-- Fight Simulator -->
+    <!-- Fighter Stats -->
+    <div class="relative bg-white">
+        <div class="relative mx-auto max-w-7xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
+            <div class="mx-auto max-w-2xl lg:mr-0 lg:ml-auto lg:w-1/2 lg:max-w-none lg:pl-10">
+                <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Fighter Name</h2>
+                <div class="mt-8 overflow-hidden">
+                    <dl class="-mx-8 -mt-8 flex flex-wrap">
+                        <div class="flex flex-col px-8 pt-8">
+                            <dt class="order-2 text-base font-medium text-black">HP</dt>
+                            <dd class="order-1 text-2xl font-bold text-red-500 sm:text-3xl sm:tracking-tight">100</dd>
+                        </div>
+                        <div class="flex flex-col px-8 pt-8">
+                            <dt class="order-2 text-base font-medium text-black">Attack</dt>
+                            <dd class="order-1 text-2xl font-bold text-red-500 sm:text-3xl sm:tracking-tight">15</dd>
+                        </div>
+                        <div class="flex flex-col px-8 pt-8">
+                            <dt class="order-2 text-base font-medium text-black">Level</dt>
+                            <dd class="order-1 text-2xl font-bold text-red-500 sm:text-3xl sm:tracking-tight">1</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Monster Stats -->
+    <div class="relative bg-white">
+        <div class="relative mx-auto max-w-7xl px-4 py-8 sm:py-12 sm:px-6 lg:py-16">
+            <div class="mx-auto max-w-2xl lg:mr-0 lg:ml-auto lg:w-1/2 lg:max-w-none lg:pl-10">
+                <h2 class="mt-6 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Monster Name</h2>
+                <div class="mt-8 overflow-hidden">
+                    <dl class="-mx-8 -mt-8 flex flex-wrap">
+                        <div class="flex flex-col px-8 pt-8">
+                            <dt class="order-2 text-base font-medium text-black">HP</dt>
+                            <dd class="order-1 text-2xl font-bold text-red-500 sm:text-3xl sm:tracking-tight">100</dd>
+                        </div>
+                        <div class="flex flex-col px-8 pt-8">
+                            <dt class="order-2 text-base font-medium text-black">Attack</dt>
+                            <dd class="order-1 text-2xl font-bold text-red-500 sm:text-3xl sm:tracking-tight">15</dd>
+                        </div>
+                        <div class="flex flex-col px-8 pt-8">
+                            <dt class="order-2 text-base font-medium text-black">Level</dt>
+                            <dd class="order-1 text-2xl font-bold text-red-500 sm:text-3xl sm:tracking-tight">1</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Attack Button -->
+    <div class="container flex flex-col items-center mt-5 mx-auto">
+            <button type="button" class="rounded-md border border-gray-300 bg-white px-8 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Attack!</button>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="bg-red-500 mt-10 sticky text-black text-right">
+        <p>This simulator is brought to you by Alex, Kevin & Tyler</p>
+    </footer>
+
+</body>
+</html>
