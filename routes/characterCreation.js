@@ -11,7 +11,7 @@ character.get('/', (req, res) => {
     readFromFile('./db/characters.json').then((data) => res.json(JSON.parse(data)));
 });
 
-// GET Route for a specific character
+//GET Route for a specific character
 character.get('/:user_id', (req, res) => {
     const userId = req.params.user_id;
     readFromFile('./db/notes.json')
@@ -43,13 +43,13 @@ character.post('/', (req, res) => {
     console.log(req.body);
 
     const { name, type } = req.body;
-
     if (req.body) {
         const newCharacter = {
             name,
             type,
             user_id: uuidv4()
         };
+        
 
         readAndAppend(newCharacter, './db/characters.json');
         res.json(`Character added successfully 🚀`);

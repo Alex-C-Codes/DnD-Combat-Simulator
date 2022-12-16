@@ -5,14 +5,19 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
     "express": "^4.16.4",
+    "express-handlebars": "^6.0.6",
+    "handlebars": "^4.7.7",
     "node-fetch": "^2.6.7",
+    "nodemon": "^2.0.20",
     "uuid": "^9.0.0"
   },
   "repository": {
@@ -23,5 +28,8 @@
   "bugs": {
     "url": "https://github.com/Alex-C-Codes/DnD-Combat-Simulator/issues"
   },
-  "homepage": "https://github.com/Alex-C-Codes/DnD-Combat-Simulator#readme"
+  "homepage": "https://github.com/Alex-C-Codes/DnD-Combat-Simulator",
+  "devDependencies": {
+    "gh-pages": "^4.0.0"
+  }
 }
